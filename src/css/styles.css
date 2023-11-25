@@ -83,7 +83,12 @@ section div.background-section video{
       width: 30px;
       padding: 6px;
       opacity: 0.8;
+      transition: transform 0.3s ease;
   }
+
+.busca .lupa:hover {
+    transform: scale(1.4);
+}
   
   .informacao-principal {
       margin: 30px;
