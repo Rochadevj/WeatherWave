@@ -12,6 +12,20 @@ botaoDeBusca.addEventListener("click", async () => {
   if (dados) preencherDadosNaTela(dados, cidade);
 });
 
+const inputDeBusca = document.getElementById("input-busca");
+
+inputDeBusca.addEventListener("keyup", async (event) => {
+  if (event.keyCode === 13) {
+    const cidade = inputDeBusca.value;
+
+    if (!cidade) return;
+
+    const dados = await buscarDadosDaCidade(cidade);
+
+    if (dados) preencherDadosNaTela(dados, cidade);
+  }
+});
+
 async function buscarDadosDaCidade(cidade) {
   const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${chaveDaApi}&q=${cidade}&aqi=no&lang=pt`;
 
