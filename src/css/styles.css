@@ -57,7 +57,8 @@ section div.background-section video{
       justify-content: center;
       gap: 5px;
   }
-  
+
+
   .busca input {
       background-color: #0a1435;
       padding: 10px;
@@ -77,18 +78,19 @@ section div.background-section video{
       border-radius: 5px;
       padding: 5px 10px;
       opacity: 0.8;
+      transition: transform 0.3s ease;
   }
   
+  .busca .btn-busca:hover {
+    transform: scale(1.1);
+}
+
   .busca .lupa {
       width: 30px;
       padding: 6px;
       opacity: 0.8;
-      transition: transform 0.3s ease;
+     
   }
-
-.busca .lupa:hover {
-    transform: scale(1.4);
-}
   
   .informacao-principal {
       margin: 30px;
